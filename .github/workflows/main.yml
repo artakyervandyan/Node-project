@@ -21,7 +21,7 @@ jobs:
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Build Docker Image
-      run: docker build -t my_nodejs
+      run: docker build . -t my_nodejs
     - name:  Push to ECR
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
